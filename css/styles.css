@@ -110,6 +110,7 @@ footer {
   line-height: 1.5em;
   padding: 10px;
   position: relative;
+  margin: 20px 0 40px 0;
 }
 .title h1:before {
   content: "";
@@ -159,5 +160,64 @@ footer {
   .about-text,
   .google-map {
     max-width: 100%; /* Allow both text and map to take full width */
+  }
+}
+/* Services */
+/* Services Section */
+.services {
+  display: flex; /* Align items horizontally */
+  flex-direction: row; /* Ensures image is on the right, text on the left */
+  align-items: flex-start; /* Aligns content to the top of the card */
+  background: #fff; /* White background for cards */
+  margin: 20px auto; /* Space between cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensures content stays inside the card */
+  max-width: 900px; /* Limit the card's width */
+  padding: 20px;
+  gap: 20px; /* Space between text and image */
+}
+
+/* Text Content */
+.services .text {
+  flex: 2; /* Allows text to take more space than the image */
+  display: flex; /* Use Flexbox for vertical alignment */
+  flex-direction: column; /* Stack title and paragraph vertically */
+  justify-content: flex-start; /* Align content to the top */
+  gap: 10px; /* Space between the title and description */
+}
+
+.services h3 {
+  margin: 0; /* Remove top margin to position title closer to the top */
+  font-size: 1.8rem;
+  color: #28666e; /* Primary color for headings */
+}
+
+.services p {
+  margin: 0; /* Remove unnecessary top margin */
+  font-size: 1rem;
+  color: #555; /* Subtle color for text */
+}
+
+/* Image Styling */
+.services img {
+  flex: 1; /* Image takes up equal space */
+  max-width: 200px; /* Limit the image width */
+  width: 100%;
+  border-radius: 8px; /* Optional: Rounded corners */
+  object-fit: cover; /* Ensures the image scales nicely */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    text-align: center; /* Center-align text */
+  }
+
+  .services img {
+    max-width: 100%; /* Full width for smaller screens */
   }
 }
