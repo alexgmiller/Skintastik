@@ -103,14 +103,32 @@ footer {
   margin-top: 20px;
 }
 /* About */
-h1#title {
-  font-size: 2rem;
+.title h1 {
+  font-size: 28px;
   font-weight: 500;
-  text-align: left; /* Align to the left */
-  color: #333;
-  margin: 10px 0;
-  border-left: 4px solid #DAD5CB; /* Add a colored left border */
-  padding-left: 15px; /* Add spacing inside the border */
+  letter-spacing: 0;
+  line-height: 1.5em;
+  padding: 10px;
+  position: relative;
+}
+.title h1:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 55px;
+  background-color: #111;
+}
+.title h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 1px;
+  width: 95%;
+  max-width: 255px;
+  background-color: #333;
 }
 .about {
   display: flex;
@@ -121,6 +139,7 @@ h1#title {
 .about-text {
   flex: 1;
   max-width: 50%;
+  padding-top: 10px;
 }
 .google-map {
   flex: 1;
