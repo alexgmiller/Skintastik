@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact</title>
+  <script>
+    fetch('meta.html')
+        .then(response => response.text())
+        .then(data => {
+            document.head.innerHTML += data;
+        })
+        .catch(error => console.error("Error loading meta data)", error))
+</script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data; // Inject navbar into #navbar
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+</script>
+</body>
+</html>
